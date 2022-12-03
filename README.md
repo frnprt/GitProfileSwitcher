@@ -2,7 +2,7 @@
 ## Introduction
 Git Credentials Switcher (gitcs) is a tiny personal project to keep multiple ```user.name``` and ```user.email``` at hand. 
 
-It allows instantly switching to a preset of git credentials without having to manually rewrite them every time.
+It allows to instantly switch to a preset of git credentials without having to manually rewrite them every time.
 
 It is mainly targeted to those devs who prefer to have many different accounts/emails and want to use different credentials in commits depending on the origin domain.
 The program has been made completely interactive via the Python [inquirer](https://github.com/magmax/python-inquirer) package.
@@ -19,7 +19,7 @@ python3 path/to/git_credentials_switcher
 ```
 This will also create a `.gitcs_config.ini` file in your home directory.
 * Eventually, you can create an alias in your favourite shell. For instance, in `bash` you can execute the following command:
-```console
+```
 echo "# Add alias for gitcs\nalias gitcs=\042python3 /path/to/GitCredentialsSwitcher/git_credentials_switcher.py\042" >> $HOME/.bashrc
 ```
 
