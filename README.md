@@ -1,6 +1,6 @@
 # Git Credentials Switcher
 ## Introduction
-Git Credentials Switcher (gitcs) is a tiny personal project to keep multiple ```user.name``` and ```user.email``` at hand. 
+Git Credentials Switcher (gitcs) is a little personal project to keep multiple ```user.name``` and ```user.email``` at hand. 
 
 It allows to instantly switch to a preset of git credentials without having to manually rewrite them every time.
 
@@ -15,7 +15,7 @@ pip install inquirer
 * Download the repository via `git clone` or download as a zip.
 * Run the program:
 ```
-python3 path/to/git_credentials_switcher
+python3 path/to/git_credentials_switcher.py
 ```
 This will also create a `.gitcs_config.ini` file in your home directory.
 * Eventually, you can create an alias in your favourite shell. For instance, in `bash` you can execute the following command:
@@ -29,7 +29,7 @@ During executiong, the program will first show the currently set `user.name` and
 It will then ask the user to choose a course of action.
 - `Switch git credentials`: start the process to switch the current `user.name` and `user.email` with previously stored credentials. <br> If you have no credentials stored in the configuration, the program will abort execution.
 - `Setup new git credentials`: start the process to add new credentials to the program configuration. If you already have credentials for a given domain or a given entry in a domain, the program will ask you if you want to override them with the new ones.
-- `Erase git credentials`: start the process to erase existing credentials in the program configuration. <br> If you have no credentials stored in the configuration, the program will abort execution.
+- `Erase git credentials`: start the process to erase an existing set of credentials from configuration. <br> If you have no credentials stored, the program will abort execution.
 
 ## Populating the configuration file
 The configuration file follows the classic `.ini` format (more on it [here](https://en.wikipedia.org//wiki/INI_file)).
