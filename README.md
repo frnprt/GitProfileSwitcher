@@ -24,7 +24,7 @@ echo "# Add alias for gitcs\nalias gitcs=\042python3 /path/to/GitCredentialsSwit
 ```
 
 ## Usage
-During executiong, the program will first show the currently set `user.name` and `user.email`.
+During execution, the program will first show the currently set `user.name` and `user.email`.
 
 It will then ask the user to choose a course of action.
 - `Switch git credentials`: start the process to switch the current `user.name` and `user.email` with previously stored credentials. <br> If you have no credentials stored in the configuration, the program will abort execution.
@@ -51,13 +51,13 @@ You can add or remove entries following the `.ini` file format.
 The interpretation of the file is as follows:
 - Domains are stored as [sections](https://en.wikipedia.org//wiki/INI_file#Sections);
 - Entry names are stored as [keys](https://en.wikipedia.org//wiki/INI_file#Keys_(properties));
-- The `user.name` and `user.email` are concatenated with a <`"`> character and the resulting string is assigned as value of the corresponding entry key. <br> The reasoning behind the choice of the quote character as separator is simple.
+- The `user.name` and `user.email` are concatenated with a `"` character and the resulting string is assigned as value of the corresponding entry key. <br> The reasoning behind the choice of the quote character as separator is simple.
     1) First, most of the git hosting sites do not accept that in a username.
     2) Second, as per [RFC 5321](https://www.rfc-editor.org/rfc/rfc5321) - page 42: 
 
         > [...] a host that expects to receive mail SHOULD avoid defining mailboxes where the Local-part requires (or uses) the Quoted-string form [...]
 
-    In any case, most of the mail providers directly forbid the <`"`> character in the local part of the address.
+    In any case, most of the mail providers directly forbid the `"` character in the local part of the address.
 
 An example of correctly set `gitcs_config.ini` is:
 ```
